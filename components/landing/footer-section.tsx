@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { useEffect, useRef } from "react";
 
@@ -114,9 +115,14 @@ export function FooterSection() {
           <div className="grid grid-cols-2 md:grid-cols-6 gap-12 lg:gap-8">
             {/* Brand Column */}
             <div className="col-span-2">
-              <a href="#" className="inline-flex items-center gap-2 mb-6">
-                <span className="text-2xl font-display font-bold text-[#163f92]">transline</span>
-                <span className="text-xs text-white/40 font-mono">technologies</span>
+              <a href="#" className="inline-flex items-center mb-6">
+                <Image
+                  src="/logo.png"
+                  alt="Transline Technologies Logo"
+                  width={380}
+                  height={100}
+                  className="object-contain h-32 w-auto"
+                />
               </a>
 
               <p className="text-white/50 leading-relaxed mb-8 max-w-xs text-sm">

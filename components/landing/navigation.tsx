@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
@@ -46,9 +47,17 @@ export function Navigation() {
           }`}
         >
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
-            <span className={`font-display tracking-tight transition-all duration-500 font-bold ${isScrolled ? "text-xl text-[#163f92]" : "text-2xl text-[#163f92]"}`}>transline</span>
-            <span className={`font-mono transition-all duration-500 ${isScrolled ? "text-[10px] mt-0.5 text-[#163f92]" : "text-xs mt-1 text-[#163f92]"}`}>technologies</span>
+          <a href="#" className="flex items-center group">
+            <Image
+              src="/logo.png"
+              alt="Transline Technologies Logo"
+              width={320}
+              height={90}
+              className={`object-contain transition-all duration-500 ${
+                isScrolled ? "h-20 w-auto" : "h-28 w-auto"
+              }`}
+              priority
+            />
           </a>
 
           {/* Desktop Navigation */}
