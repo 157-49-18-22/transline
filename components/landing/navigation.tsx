@@ -47,17 +47,26 @@ export function Navigation() {
           }`}
         >
           {/* Logo */}
-          <a href="#" className="flex items-center group">
-            <Image
-              src="/logo.png"
-              alt="Transline Technologies Logo"
-              width={320}
-              height={90}
-              className={`object-contain transition-all duration-500 ${
-                isScrolled ? "h-20 w-auto" : "h-28 w-auto"
-              }`}
-              priority
-            />
+          <a href="#" className="flex items-center group relative">
+            {/* Soft glow background */}
+            <div className={`absolute inset-0 bg-white/10 blur-xl rounded-full transition-all duration-500 ${
+              isScrolled ? "scale-75" : "scale-100"
+            }`} />
+            
+            <div className={`relative bg-white shadow-[0_0_20px_rgba(255,255,255,0.3)] rounded-lg transition-all duration-500 flex items-center justify-center border border-white/20 ${
+              isScrolled ? "px-2 py-1" : "px-3 py-1.5"
+            }`}>
+              <Image
+                src="/logo.png"
+                alt="Transline Technologies Logo"
+                width={320}
+                height={90}
+                className={`object-contain transition-all duration-500 ${
+                  isScrolled ? "h-5 w-auto" : "h-8 w-auto"
+                }`}
+                priority
+              />
+            </div>
           </a>
 
           {/* Desktop Navigation */}

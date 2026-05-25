@@ -115,14 +115,19 @@ export function FooterSection() {
           <div className="grid grid-cols-2 md:grid-cols-6 gap-12 lg:gap-8">
             {/* Brand Column */}
             <div className="col-span-2">
-              <a href="#" className="inline-flex items-center mb-6">
-                <Image
-                  src="/logo.png"
-                  alt="Transline Technologies Logo"
-                  width={380}
-                  height={100}
-                  className="object-contain h-32 w-auto"
-                />
+              <a href="#" className="inline-flex items-center mb-6 relative group">
+                {/* Subtle glow */}
+                <div className="absolute inset-0 bg-white/5 blur-lg rounded-full scale-110 group-hover:bg-white/10 transition-all duration-500" />
+                
+                <div className="relative bg-white shadow-[0_0_15px_rgba(255,255,255,0.2)] px-3 py-1.5 rounded-lg flex items-center justify-center border border-white/10">
+                  <Image
+                    src="/logo.png"
+                    alt="Transline Technologies Logo"
+                    width={380}
+                    height={100}
+                    className="object-contain h-7 w-auto"
+                  />
+                </div>
               </a>
 
               <p className="text-white/50 leading-relaxed mb-8 max-w-xs text-sm">
