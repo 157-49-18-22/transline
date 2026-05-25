@@ -185,7 +185,7 @@ export function FeaturesSection() {
               <p className={`text-xl text-muted-foreground leading-relaxed transition-all duration-1000 delay-200 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}>
-                From smart surveillance and biometric access to AI analytics and IT networking � Transline delivers a complete suite of technology solutions for every security need.
+                From smart surveillance and biometric access to AI analytics and IT networking — Transline delivers a complete suite of technology solutions for every security need.
               </p>
             </div>
           </div>

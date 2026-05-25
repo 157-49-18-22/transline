@@ -19,7 +19,7 @@ const footerLinks = {
   ],
   Company: [
     { name: "About Us", href: "#about" },
-    { name: "Investor Relations", href: "#investors" },
+    { name: "Circulars/Notification", href: "#circulars" },
     { name: "Careers", href: "#careers", badge: "Hiring" },
     { name: "Contact", href: "#contact" },
   ],
@@ -131,7 +131,7 @@ export function FooterSection() {
               </a>
 
               <p className="text-white/50 leading-relaxed mb-8 max-w-xs text-sm">
-                Leading provider of biometrics, surveillance, and IT infrastructure solutions across India since 1999.
+                Leading provider of surveillance, biometrics, and IT infrastructure solutions across India since 1999.
               </p>
 
               {/* Social Links */}
