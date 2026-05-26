@@ -183,7 +183,7 @@ export function HeroSection() {
               className={`text-left text-[clamp(2rem,6vw,7rem)] font-display leading-[0.92] tracking-tight text-white transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
             >
-              <span className="block whitespace-nowrap">gaak Technologies,</span>
+              <span className="block whitespace-nowrap">Gaak Technologies,</span>
               <span className="block whitespace-nowrap">
                 Surveillance that{" "}
                 <span className="relative inline-block">

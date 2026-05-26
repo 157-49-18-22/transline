@@ -56,7 +56,7 @@ export function CtaSection() {
                 </h2>
 
                 <p className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-xl">
-                  Join 100+ organizations across India who trust gaak for surveillance, biometrics, and enterprise security solutions.
+                  Join 100+ organizations across India who trust Gaak for surveillance, biometrics, and enterprise security solutions.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-start gap-4">
@@ -77,7 +77,7 @@ export function CtaSection() {
                 </div>
 
                 <p className="text-sm text-muted-foreground mt-8 font-mono">
-                  Serving India since 1999 — gaak Technologies
+                  Serving India since 1999 — Gaak Technologies
                 </p>
               </div>
 

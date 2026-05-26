@@ -109,8 +109,8 @@ export function PricingSection() {
               <div
                 key={plan.name}
                 className={`relative bg-background border transition-all duration-700 ${plan.highlight
-                    ? "border-foreground lg:-mx-2 lg:z-10 lg:scale-105"
-                    : "border-foreground/10 lg:first:-mr-2 lg:last:-ml-2"
+                  ? "border-foreground lg:-mx-2 lg:z-10 lg:scale-105"
+                  : "border-foreground/10 lg:first:-mr-2 lg:last:-ml-2"
                   } ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
@@ -134,7 +134,7 @@ export function PricingSection() {
                     <p className="text-sm text-muted-foreground mt-2">{plan.description}</p>
                   </div>
 
-                  {/* Price — always show 'Custom' for gaak */}
+                  {/* Price — always show 'Custom' for Gaak */}
                   <div className="mb-8">
                     <span className="text-4xl font-display">Custom</span>
                     <p className="text-xs text-muted-foreground mt-2 font-mono">contact us for pricing</p>
@@ -153,8 +153,8 @@ export function PricingSection() {
                   {/* CTA */}
                   <button
                     className={`w-full py-4 flex items-center justify-center gap-2 text-sm font-medium transition-all group ${plan.highlight
-                        ? "bg-foreground text-background hover:bg-foreground/90"
-                        : "border border-foreground/20 text-foreground hover:border-foreground hover:bg-foreground/5"
+                      ? "bg-foreground text-background hover:bg-foreground/90"
+                      : "border border-foreground/20 text-foreground hover:border-foreground hover:bg-foreground/5"
                       }`}
                   >
                     {plan.cta}

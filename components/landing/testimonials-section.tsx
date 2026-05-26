@@ -5,7 +5,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "gaak's surveillance solution transformed our campus security. Incident response time dropped by 70%.",
+    quote: "Gaak's surveillance solution transformed our campus security. Incident response time dropped by 70%.",
     author: "Rajesh Kumar",
     role: "Head of Security",
     company: "HDFC Bank",
@@ -197,8 +197,8 @@ export function TestimonialsSection() {
                     key={t.company}
                     onClick={() => goTo(idx)}
                     className={`px-4 py-2 text-sm border transition-all ${idx === activeIndex
-                        ? "border-background/40 text-background"
-                        : "border-background/10 text-background/40 hover:border-background/30"
+                      ? "border-background/40 text-background"
+                      : "border-background/10 text-background/40 hover:border-background/30"
                       }`}
                   >
                     {t.company}

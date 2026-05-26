@@ -121,7 +121,7 @@ export function FooterSection() {
                 <div className="relative px-3 py-1.5 flex items-center justify-center">
                   <Image
                     src="/logo.png"
-                    alt="gaak Technologies Logo"
+                    alt="Gaak Technologies Logo"
                     width={380}
                     height={100}
                     className="object-contain h-7 w-auto"
@@ -177,7 +177,7 @@ export function FooterSection() {
         {/* Bottom Bar */}
         <div className="py-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-white/30">
-            &copy; 2025 gaak Technologies. All rights reserved.
+            &copy; 2025 Gaak Technologies. All rights reserved.
           </p>
 
           <div className="flex items-center gap-4 text-sm text-white/30">

@@ -183,7 +183,7 @@ export function FeaturesSection() {
             <div className="lg:col-span-5 lg:pb-4">
               <p className={`text-xl text-muted-foreground leading-relaxed transition-all duration-1000 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                 }`}>
-                From smart surveillance and biometric access to AI analytics and IT networking — gaak delivers a complete suite of technology solutions for every security need.
+                From smart surveillance and biometric access to AI analytics and IT networking — Gaak delivers a complete suite of technology solutions for every security need.
               </p>
             </div>
           </div>

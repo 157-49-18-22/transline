@@ -81,7 +81,7 @@ export function DevelopersSection() {
             }`}
         >
           <p className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-md">
-            gaak builds end-to-end technology ecosystems — cameras, biometrics, networking, and software all unified under one expert team.
+            Gaak builds end-to-end technology ecosystems — cameras, biometrics, networking, and software all unified under one expert team.
           </p>
           <div className="grid grid-cols-2 gap-6">
             {features.map((feature, index) => (
