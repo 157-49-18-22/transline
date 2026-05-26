@@ -172,9 +172,8 @@ export function FeaturesSection() {
                 Products & Solutions
               </span>
               <h2
-                className={`text-6xl md:text-7xl lg:text-[128px] font-display tracking-tight leading-[0.9] transition-all duration-1000 ${
-                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                }`}
+                className={`text-6xl md:text-7xl lg:text-[128px] font-display tracking-tight leading-[0.9] transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                  }`}
               >
                 Our Products
                 <br />
@@ -182,10 +181,9 @@ export function FeaturesSection() {
               </h2>
             </div>
             <div className="lg:col-span-5 lg:pb-4">
-              <p className={`text-xl text-muted-foreground leading-relaxed transition-all duration-1000 delay-200 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-              }`}>
-                From smart surveillance and biometric access to AI analytics and IT networking — Transline delivers a complete suite of technology solutions for every security need.
+              <p className={`text-xl text-muted-foreground leading-relaxed transition-all duration-1000 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+                }`}>
+                From smart surveillance and biometric access to AI analytics and IT networking — gaak delivers a complete suite of technology solutions for every security need.
               </p>
             </div>
           </div>
@@ -196,9 +194,8 @@ export function FeaturesSection() {
 
           {/* Card 01 — large hero card, full width */}
           <div
-            className={`lg:col-span-12 relative bg-black border border-foreground/10 min-h-[480px] overflow-hidden group transition-all duration-700 flex ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-            }`}
+            className={`lg:col-span-12 relative bg-black border border-foreground/10 min-h-[480px] overflow-hidden group transition-all duration-700 flex ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+              }`}
             onMouseEnter={() => setActiveFeature(0)}
             onMouseLeave={() => setActiveFeature(null)}
           >
@@ -229,25 +226,22 @@ export function FeaturesSection() {
               <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent" />
             </div>
             {/* Blue accent bottom line */}
-            <div className={`absolute bottom-0 left-0 right-0 h-0.5 bg-[#163f92] transition-transform duration-500 origin-left ${
-              activeFeature === 0 ? "scale-x-100" : "scale-x-0"
-            }`} />
+            <div className={`absolute bottom-0 left-0 right-0 h-0.5 bg-[#163f92] transition-transform duration-500 origin-left ${activeFeature === 0 ? "scale-x-100" : "scale-x-0"
+              }`} />
           </div>
 
           {/* Cards 02–04 — first row of 3 */}
           {features.slice(1, 4).map((feature, i) => (
             <div
               key={feature.number}
-              className={`lg:col-span-4 relative bg-black border border-foreground/10 min-h-[300px] overflow-hidden group cursor-default transition-all duration-700 p-8 lg:p-10 flex flex-col justify-between ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-              }`}
+              className={`lg:col-span-4 relative bg-black border border-foreground/10 min-h-[300px] overflow-hidden group cursor-default transition-all duration-700 p-8 lg:p-10 flex flex-col justify-between ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+                }`}
               style={{ transitionDelay: `${(i + 1) * 100}ms` }}
               onMouseEnter={() => setActiveFeature(i + 1)}
               onMouseLeave={() => setActiveFeature(null)}
             >
-              <div className={`absolute inset-0 transition-opacity duration-500 pointer-events-none ${
-                activeFeature === i + 1 ? "opacity-100" : "opacity-0"
-              }`}>
+              <div className={`absolute inset-0 transition-opacity duration-500 pointer-events-none ${activeFeature === i + 1 ? "opacity-100" : "opacity-0"
+                }`}>
                 <ParticleVisualization />
               </div>
               <div className="relative z-10 flex flex-col h-full">
@@ -265,9 +259,8 @@ export function FeaturesSection() {
                   <span className="block text-xs text-muted-foreground font-mono mt-2">{feature.stats.label}</span>
                 </div>
               </div>
-              <div className={`absolute bottom-0 left-0 right-0 h-0.5 bg-[#163f92] transition-transform duration-500 origin-left ${
-                activeFeature === i + 1 ? "scale-x-100" : "scale-x-0"
-              }`} />
+              <div className={`absolute bottom-0 left-0 right-0 h-0.5 bg-[#163f92] transition-transform duration-500 origin-left ${activeFeature === i + 1 ? "scale-x-100" : "scale-x-0"
+                }`} />
             </div>
           ))}
 
@@ -275,16 +268,14 @@ export function FeaturesSection() {
           {features.slice(4).map((feature, i) => (
             <div
               key={feature.number}
-              className={`lg:col-span-6 relative bg-black border border-foreground/10 min-h-[280px] overflow-hidden group cursor-default transition-all duration-700 p-8 lg:p-10 flex flex-col justify-between ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-              }`}
+              className={`lg:col-span-6 relative bg-black border border-foreground/10 min-h-[280px] overflow-hidden group cursor-default transition-all duration-700 p-8 lg:p-10 flex flex-col justify-between ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+                }`}
               style={{ transitionDelay: `${(i + 4) * 100}ms` }}
               onMouseEnter={() => setActiveFeature(i + 4)}
               onMouseLeave={() => setActiveFeature(null)}
             >
-              <div className={`absolute inset-0 transition-opacity duration-500 pointer-events-none ${
-                activeFeature === i + 4 ? "opacity-100" : "opacity-0"
-              }`}>
+              <div className={`absolute inset-0 transition-opacity duration-500 pointer-events-none ${activeFeature === i + 4 ? "opacity-100" : "opacity-0"
+                }`}>
                 <ParticleVisualization />
               </div>
               <div className="relative z-10 flex flex-col h-full">
@@ -302,9 +293,8 @@ export function FeaturesSection() {
                   <span className="block text-xs text-muted-foreground font-mono mt-2">{feature.stats.label}</span>
                 </div>
               </div>
-              <div className={`absolute bottom-0 left-0 right-0 h-0.5 bg-[#163f92] transition-transform duration-500 origin-left ${
-                activeFeature === i + 4 ? "scale-x-100" : "scale-x-0"
-              }`} />
+              <div className={`absolute bottom-0 left-0 right-0 h-0.5 bg-[#163f92] transition-transform duration-500 origin-left ${activeFeature === i + 4 ? "scale-x-100" : "scale-x-0"
+                }`} />
             </div>
           ))}
 

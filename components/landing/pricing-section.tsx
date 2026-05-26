@@ -80,20 +80,18 @@ export function PricingSection() {
               <span className="w-12 h-px bg-foreground/30" />
               Pricing
             </span>
-            <h2 className={`text-6xl md:text-7xl lg:text-[128px] font-display tracking-tight leading-[0.9] transition-all duration-1000 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}>
+            <h2 className={`text-6xl md:text-7xl lg:text-[128px] font-display tracking-tight leading-[0.9] transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}>
               Tailored
               <br />
               <span className="text-stroke">solutions.</span>
             </h2>
           </div>
-          
+
           <div className="lg:col-span-5 relative p-0 h-96 lg:h-auto">
             {/* Whale image */}
-            <div className={`absolute inset-0 pointer-events-none transition-all duration-1000 delay-100 ${
-              isVisible ? "opacity-100" : "opacity-0"
-            }`}>
+            <div className={`absolute inset-0 pointer-events-none transition-all duration-1000 delay-100 ${isVisible ? "opacity-100" : "opacity-0"
+              }`}>
               <img
                 src="/images/whale.png"
                 alt="Organic whale"
@@ -110,11 +108,10 @@ export function PricingSection() {
             {plans.map((plan, index) => (
               <div
                 key={plan.name}
-                className={`relative bg-background border transition-all duration-700 ${
-                  plan.highlight 
-                    ? "border-foreground lg:-mx-2 lg:z-10 lg:scale-105" 
+                className={`relative bg-background border transition-all duration-700 ${plan.highlight
+                    ? "border-foreground lg:-mx-2 lg:z-10 lg:scale-105"
                     : "border-foreground/10 lg:first:-mr-2 lg:last:-ml-2"
-                } ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}
+                  } ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 {/* Popular badge */}
@@ -137,7 +134,7 @@ export function PricingSection() {
                     <p className="text-sm text-muted-foreground mt-2">{plan.description}</p>
                   </div>
 
-                  {/* Price — always show 'Custom' for Transline */}
+                  {/* Price — always show 'Custom' for gaak */}
                   <div className="mb-8">
                     <span className="text-4xl font-display">Custom</span>
                     <p className="text-xs text-muted-foreground mt-2 font-mono">contact us for pricing</p>
@@ -155,11 +152,10 @@ export function PricingSection() {
 
                   {/* CTA */}
                   <button
-                    className={`w-full py-4 flex items-center justify-center gap-2 text-sm font-medium transition-all group ${
-                      plan.highlight
+                    className={`w-full py-4 flex items-center justify-center gap-2 text-sm font-medium transition-all group ${plan.highlight
                         ? "bg-foreground text-background hover:bg-foreground/90"
                         : "border border-foreground/20 text-foreground hover:border-foreground hover:bg-foreground/5"
-                    }`}
+                      }`}
                   >
                     {plan.cta}
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -171,9 +167,8 @@ export function PricingSection() {
         </div>
 
         {/* Bottom note with icons */}
-        <div className={`mt-20 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 pt-12 border-t border-foreground/10 transition-all duration-1000 delay-500 ${
-          isVisible ? "opacity-100" : "opacity-0"
-        }`}>
+        <div className={`mt-20 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 pt-12 border-t border-foreground/10 transition-all duration-1000 delay-500 ${isVisible ? "opacity-100" : "opacity-0"
+          }`}>
           <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
             <span className="flex items-center gap-2">
               <Check className="w-4 h-4 text-[#163f92]" />
