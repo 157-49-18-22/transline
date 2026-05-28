@@ -6,12 +6,12 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About Us", href: "#about" },
-  { name: "Products & Solutions", href: "#products" },
-  { name: "Circulars/Notification", href: "#circulars" },
-  { name: "Careers", href: "#careers" },
-  { name: "Contact Us", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about" },
+  { name: "Products & Solutions", href: "/solutions" },
+  { name: "Circulars/Notification", href: "/circulars" },
+  { name: "Careers", href: "/careers" },
+  { name: "Contact Us", href: "/contact" },
 ];
 
 export function Navigation() {
@@ -77,12 +77,14 @@ export function Navigation() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <Button
-              size="sm"
-              className={`rounded-full transition-all duration-500 ${isScrolled ? "bg-[#e32d2f] hover:bg-[#c22425] text-white px-4 h-8 text-xs" : "bg-white hover:bg-white/90 text-black px-6"}`}
-            >
-              Get Demo
-            </Button>
+            <a href="/contact">
+              <Button
+                size="sm"
+                className={`rounded-full transition-all duration-500 ${isScrolled ? "bg-[#e32d2f] hover:bg-[#c22425] text-white px-4 h-8 text-xs" : "bg-white hover:bg-white/90 text-black px-6"}`}
+              >
+                Get Demo
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -135,12 +137,14 @@ export function Navigation() {
             }`}
             style={{ transitionDelay: isMobileMenuOpen ? "300ms" : "0ms" }}
           >
-            <Button
-              className="flex-1 bg-[#e32d2f] hover:bg-[#c22425] text-white rounded-full h-14 text-base"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Get Demo
-            </Button>
+            <a href="/contact" className="w-full flex-1">
+              <Button
+                className="w-full bg-[#e32d2f] hover:bg-[#c22425] text-white rounded-full h-14 text-base"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Get Demo
+              </Button>
+            </a>
           </div>
         </div>
       </div>
