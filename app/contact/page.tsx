@@ -33,10 +33,9 @@ export default function ContactPage() {
   );
 
   return (
-    <main className="relative min-h-screen overflow-x-hidden bg-[#030303] text-white selection:bg-blue-500/30">
-      
+    <>
       {/* Fixed Background Image */}
-      <div className="fixed inset-0 z-0 pointer-events-none">
+      <div className="fixed inset-0 z-[-1] pointer-events-none bg-[#030303]">
         <img
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2813%29-OQ2DiR3ElVsUg8kTvTL1kC5A3Q6maM.png"
           alt="Contact Background"
@@ -45,6 +44,8 @@ export default function ContactPage() {
         {/* Subtle gradients to ensure text remains readable without blurring */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/80" />
       </div>
+
+    <main className="relative min-h-screen overflow-x-hidden text-white selection:bg-blue-500/30 w-full">
 
       <div className="relative z-10">
         <Navigation />
@@ -234,5 +235,6 @@ export default function ContactPage() {
         <FooterSection />
       </div>
     </main>
+    </>
   );
 }

@@ -60,10 +60,9 @@ export default function CareersPage() {
   ];
 
   return (
-    <main className="relative min-h-screen overflow-x-hidden bg-black text-white selection:bg-white/30">
-      
+    <>
       {/* Background Image - Shield (fixed so it stays while scrolling) */}
-      <div className="fixed inset-0 z-0 pointer-events-none">
+      <div className="fixed inset-0 z-[-1] pointer-events-none bg-black">
         <img
           src="/images/shield.png"
           alt="Background"
@@ -72,6 +71,8 @@ export default function CareersPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-black/80" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/90" />
       </div>
+
+    <main className="relative min-h-screen overflow-x-hidden text-white selection:bg-white/30 w-full">
 
       {/* Floating Tree Background relative to viewport */}
       <div 
@@ -269,5 +270,6 @@ export default function CareersPage() {
         <FooterSection />
       </div>
     </main>
+    </>
   );
 }

@@ -120,10 +120,9 @@ export default function SolutionsPage() {
   ];
 
   return (
-    <main className="relative min-h-screen overflow-x-hidden bg-black text-white selection:bg-white/30">
-      
+    <>
       {/* Background Image */}
-      <div className="fixed inset-0 z-0 pointer-events-none bg-black">
+      <div className="fixed inset-0 z-[-1] pointer-events-none bg-black">
         <img 
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/connection-KeJwWPQvn6l0a7C48tCARYtNEdC92H.png" 
           alt="Hands Connection Background" 
@@ -132,6 +131,8 @@ export default function SolutionsPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/10 to-black/90" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50" />
       </div>
+
+      <main className="relative min-h-screen overflow-x-hidden text-white selection:bg-white/30 w-full">
 
       <div className="relative z-10">
         <Navigation />
@@ -281,5 +282,6 @@ export default function SolutionsPage() {
         <FooterSection />
       </div>
     </main>
+    </>
   );
 }

@@ -129,7 +129,7 @@ export function HeroSection() {
           loop
           playsInline
           aria-hidden="true"
-          className="w-full h-full object-cover object-center opacity-80"
+          className="w-full h-full object-cover object-[75%_center] lg:object-center opacity-80"
         >
           <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bg-hero-0BnFGdr81Ifnj3WbBZoNt1KE4D5DMT.mp4" type="video/mp4" />
         </video>
@@ -200,13 +200,13 @@ export function HeroSection() {
         className={`absolute bottom-12 left-0 right-0 px-6 lg:px-12 transition-all duration-700 delay-500 ${isVisible ? "opacity-100" : "opacity-0"
           }`}
       >
-        <div className="max-w-[1400px] mx-auto flex items-start gap-10 lg:gap-20">
+        <div className="max-w-[1400px] mx-auto flex flex-wrap md:flex-nowrap items-start gap-6 md:gap-10 lg:gap-20">
           {[
             { value: "500+", label: "projects delivered" },
             { value: "99.9%", label: "system uptime" },
             { value: "24/7", label: "surveillance & support" },
           ].map((stat) => (
-            <div key={stat.label} className="flex flex-col gap-2">
+            <div key={stat.label} className="flex flex-col gap-1 md:gap-2 w-[calc(50%-12px)] md:w-auto">
               <span className="text-3xl lg:text-4xl font-display text-white">{stat.value}</span>
               <span className="text-xs text-white/50 leading-tight">
                 {stat.label}

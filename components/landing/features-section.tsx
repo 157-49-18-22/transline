@@ -194,36 +194,41 @@ export function FeaturesSection() {
 
           {/* Card 01 — large hero card, full width */}
           <div
-            className={`lg:col-span-12 relative bg-black border border-foreground/10 min-h-[480px] overflow-hidden group transition-all duration-700 flex ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+            className={`lg:col-span-12 relative bg-black border border-foreground/10 min-h-[480px] overflow-hidden group transition-all duration-700 flex flex-col lg:flex-row ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
               }`}
             onMouseEnter={() => setActiveFeature(0)}
             onMouseLeave={() => setActiveFeature(null)}
           >
-            <div className="relative flex-1 p-8 lg:p-12 bg-black">
-              <ParticleVisualization />
-              <div className="relative z-10">
-                <span className="font-mono text-sm text-muted-foreground">{features[0].number}</span>
-                <h3 className="text-3xl lg:text-4xl font-display mt-4 mb-6 text-white group-hover:translate-x-2 transition-transform duration-500">
-                  {features[0].title}
-                </h3>
-                <p className="text-lg text-muted-foreground leading-relaxed max-w-md mb-8">
-                  {features[0].description}
-                </p>
-                <div>
-                  <span className="text-5xl lg:text-6xl font-display text-white">{features[0].stats.value}</span>
-                  <span className="block text-sm text-muted-foreground font-mono mt-2">{features[0].stats.label}</span>
-                </div>
-              </div>
-            </div>
-            <div className="hidden lg:block relative w-[42%] shrink-0 overflow-hidden">
+            {/* Image Container: Background overlay on mobile, side panel on desktop */}
+            <div className="absolute inset-0 lg:static lg:w-[42%] lg:shrink-0 overflow-hidden order-last">
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2812%29-ng3RrNnsPMJ5CrtOjcPTmhHg01W11q.png"
                 alt=""
                 aria-hidden="true"
-                className="absolute inset-0 w-full h-full object-cover object-center"
+                className="absolute inset-0 w-full h-full object-cover object-left opacity-30 lg:opacity-100 mix-blend-screen lg:mix-blend-normal"
                 style={{ transform: "scaleX(-1)" }}
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent lg:hidden" />
+              <div className="hidden lg:block absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent" />
+            </div>
+
+            <div className="relative flex-1 p-8 lg:p-12 z-10 lg:bg-black order-first flex flex-col justify-center">
+              <div className="absolute inset-0 lg:relative lg:inset-auto z-[-1] pointer-events-none lg:pointer-events-auto">
+                <ParticleVisualization />
+              </div>
+              <div className="relative z-10 mt-auto lg:mt-0">
+                <span className="font-mono text-sm text-blue-400 lg:text-muted-foreground drop-shadow-md lg:drop-shadow-none">{features[0].number}</span>
+                <h3 className="text-3xl lg:text-4xl font-display mt-4 mb-6 text-white group-hover:translate-x-2 transition-transform duration-500 drop-shadow-xl lg:drop-shadow-none">
+                  {features[0].title}
+                </h3>
+                <p className="text-lg text-white/80 lg:text-muted-foreground leading-relaxed max-w-md mb-8 drop-shadow-md lg:drop-shadow-none">
+                  {features[0].description}
+                </p>
+                <div>
+                  <span className="text-5xl lg:text-6xl font-display text-white drop-shadow-lg lg:drop-shadow-none">{features[0].stats.value}</span>
+                  <span className="block text-sm text-white/70 lg:text-muted-foreground font-mono mt-2">{features[0].stats.label}</span>
+                </div>
+              </div>
             </div>
             {/* Blue accent bottom line */}
             <div className={`absolute bottom-0 left-0 right-0 h-0.5 bg-[#163f92] transition-transform duration-500 origin-left ${activeFeature === 0 ? "scale-x-100" : "scale-x-0"

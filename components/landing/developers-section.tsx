@@ -42,17 +42,17 @@ export function DevelopersSection() {
 
       {/* Image — absolute, bottom-right, behind all content */}
       <div
-        className={`absolute bottom-0 right-0 w-[55%] h-[85%] pointer-events-none transition-all duration-1000 delay-300 ${isVisible ? "opacity-100" : "opacity-0"
+        className={`absolute bottom-0 right-0 w-full h-[70%] lg:w-[55%] lg:h-[85%] pointer-events-none transition-all duration-1000 delay-300 ${isVisible ? "opacity-100" : "opacity-0"
           }`}
       >
         <img
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Upscaled%20Image%20%2813%29-OQ2DiR3ElVsUg8kTvTL1kC5A3Q6maM.png"
           alt=""
           aria-hidden="true"
-          className="w-full h-full object-cover object-left-top"
+          className="w-full h-full object-cover object-left-top opacity-30 lg:opacity-100"
         />
         {/* Fade left edge */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 lg:via-background/60 to-transparent" />
         {/* Fade top edge */}
         <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-transparent" />
       </div>
@@ -75,12 +75,12 @@ export function DevelopersSection() {
           </h2>
         </div>
 
-        {/* Description + Features — left half only */}
+        {/* Description + Features */}
         <div
-          className={`max-w-[50%] transition-all duration-700 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          className={`w-full lg:max-w-[50%] transition-all duration-700 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
         >
-          <p className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-md">
+          <p className="text-lg lg:text-xl text-muted-foreground mb-10 lg:mb-12 leading-relaxed max-w-md">
             Gaak builds end-to-end technology ecosystems — cameras, biometrics, networking, and software all unified under one expert team.
           </p>
           <div className="grid grid-cols-2 gap-6">

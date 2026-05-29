@@ -98,11 +98,9 @@ export function SecuritySection() {
           </p>
         </div>
 
-        {/* Timeline */}
-        <div className={`relative transition-all duration-1000 delay-200 ${isVisible ? "opacity-100" : "opacity-0"}`}>
-          
-          {/* Top row milestones (above line) */}
-          <div className="grid grid-cols-4 lg:grid-cols-8 gap-0 mb-0">
+        {/* Desktop Horizontal Timeline */}
+        <div className={`hidden lg:block relative transition-all duration-1000 delay-200 ${isVisible ? "opacity-100" : "opacity-0"}`}>
+          <div className="grid grid-cols-8 gap-0 mb-0">
             {milestones.map((m, i) => (
               <div key={m.year + "-top"} className={`relative min-h-[200px] px-2 ${m.position === "top" ? "flex flex-col justify-end pb-4" : ""}`}>
                 {m.position === "top" && (
@@ -122,18 +120,13 @@ export function SecuritySection() {
             ))}
           </div>
 
-          {/* The Timeline Bar with dots */}
           <div className="relative flex items-center">
-            {/* Horizontal line */}
             <div className="absolute top-1/2 left-0 right-0 h-px bg-foreground/10 -translate-y-1/2" />
-            {/* Animated fill line */}
             <div
               className="absolute top-1/2 left-0 h-px bg-primary/60 -translate-y-1/2 transition-all duration-1000"
               style={{ width: isVisible ? "100%" : "0%" }}
             />
-
-            {/* Dots grid */}
-            <div className="grid grid-cols-4 lg:grid-cols-8 gap-0 w-full relative z-10">
+            <div className="grid grid-cols-8 gap-0 w-full relative z-10">
               {milestones.map((m, i) => (
                 <div key={m.year + "-dot"} className="flex items-center justify-center py-4">
                   <button
@@ -150,8 +143,7 @@ export function SecuritySection() {
             </div>
           </div>
 
-          {/* Bottom row milestones (below line) */}
-          <div className="grid grid-cols-4 lg:grid-cols-8 gap-0 mt-0">
+          <div className="grid grid-cols-8 gap-0 mt-0">
             {milestones.map((m, i) => (
               <div key={m.year + "-bot"} className={`relative min-h-[200px] px-2 ${m.position === "bottom" ? "flex flex-col justify-start pt-4" : ""}`}>
                 {m.position === "bottom" && (
@@ -171,7 +163,6 @@ export function SecuritySection() {
             ))}
           </div>
 
-          {/* Active milestone full detail card */}
           {activeMilestone !== null && (
             <div className={`mt-12 p-8 border border-primary/30 bg-primary/5 transition-all duration-500`}>
               <div className="flex items-start gap-6">
@@ -185,6 +176,56 @@ export function SecuritySection() {
               </div>
             </div>
           )}
+        </div>
+
+        {/* Mobile Vertical Timeline */}
+        <div className={`block lg:hidden relative ml-2 py-4 transition-all duration-1000 delay-200 ${isVisible ? "opacity-100" : "opacity-0"}`}>
+          <div className="absolute left-[7px] top-4 bottom-8 w-px bg-foreground/10" />
+          <div 
+            className="absolute left-[7px] top-4 w-px bg-primary/60 transition-all duration-1000"
+            style={{ height: isVisible ? "90%" : "0%" }}
+          />
+          
+          {milestones.map((m, i) => (
+            <div key={m.year + "-mobile"} className="mb-10 relative pl-8">
+              <button 
+                onClick={() => setActiveMilestone(activeMilestone === i ? null : i)}
+                className={`absolute -left-0 top-1 w-4 h-4 rounded-full border-2 transition-all duration-300 ${
+                  activeMilestone === i
+                    ? "border-primary bg-primary scale-125"
+                    : "border-primary/60 bg-black hover:border-primary"
+                }`}
+                aria-label={m.year}
+              />
+              
+              <div 
+                className="cursor-pointer" 
+                onClick={() => setActiveMilestone(activeMilestone === i ? null : i)}
+              >
+                <div className="flex items-baseline gap-3 mb-2">
+                  <span className={`text-2xl font-display font-bold transition-colors duration-300 ${activeMilestone === i ? "text-primary" : "text-primary/80"}`}>
+                    {m.year}
+                  </span>
+                  {!activeMilestone || activeMilestone !== i ? (
+                    <span className="text-sm font-medium text-foreground/80 truncate">
+                      {m.title}
+                    </span>
+                  ) : null}
+                </div>
+                
+                {activeMilestone === i ? (
+                  <div className="bg-primary/5 border border-primary/20 p-5 rounded-2xl mt-4">
+                     <h3 className="text-lg font-semibold text-foreground mb-2">{m.title}</h3>
+                     <p className="text-sm text-muted-foreground leading-relaxed">{m.description}</p>
+                  </div>
+                ) : (
+                  <p className="text-sm text-muted-foreground leading-snug line-clamp-2 pr-4">
+                    {m.description}
+                  </p>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
